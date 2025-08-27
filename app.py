@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>ניהול תקציב חודשי</title>
   <style>
-    body { font-family: Arial, sans-serif; direction: rtl; padding: 20px; background:#f9f9f9; }
+    body { font-family: Arial, sans-serif; padding: 20px; background:#f9f9f9; }
     h1, h2 { margin-top: 20px; }
     select, button, input { padding: 6px; margin: 5px 0; }
     .expense-list { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; max-width: 500px; background:#fff; border-radius:8px; }
