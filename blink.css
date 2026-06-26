@@ -1,0 +1,1 @@
+.lbl.ok{color:#22c55e;animation:nmtOk 1.6s ease-in-out infinite}.lbl.bad{color:#ef4444;animation:nmtBad 1.6s ease-in-out infinite}@keyframes nmtOk{0%,100%{opacity:1}50%{opacity:.35}}@keyframes nmtBad{0%,100%{opacity:1}50%{opacity:.35}}
