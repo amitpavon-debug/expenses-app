@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NMT SCADA</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=mobile-scroll-2">
+  <link rel="stylesheet" href="style.css?v=map-layout-1">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
@@ -50,10 +50,12 @@
   </section>
 
   <section id="map" class="view">
-    <div class="panel">
-      <button class="primary" onclick="geocodeAll()">עדכן מיקומים לפי ערים</button>
-      <button onclick="fitMap()">מרכז מפה</button>
-      <div id="mapBox" style="margin-top:10px"></div>
+    <div class="panel mapPanel">
+      <div id="mapBox"></div>
+      <div class="mapActions">
+        <button class="primary" onclick="geocodeAll()">עדכן מיקומים לפי ערים</button>
+        <button onclick="fitMap()">מרכז מפה</button>
+      </div>
       <div class="muted">במפה העיגולים נשארים כהים, ורק צבע המספר משתנה לפי הסטטוס.</div>
     </div>
   </section>
@@ -109,6 +111,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=mobile-scroll-2"></script>
+  <script src="script.js?v=map-layout-1"></script>
 </body>
 </html>
