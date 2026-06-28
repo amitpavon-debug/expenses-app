@@ -1,6 +1,58 @@
 const nums=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,19,20,21,22];
 const key='nmt_scada_v6';
 let current=null,map,markers=[];
+
+function injectLayoutFix(){
+  const st=document.createElement('style');
+  st.textContent=`
+    @media (min-width:801px){
+      .dash{
+        direction:ltr;
+        display:grid!important;
+        grid-template-columns:repeat(auto-fill,minmax(220px,1fr))!important;
+        gap:14px!important;
+        align-items:stretch;
+      }
+      .tile{
+        direction:rtl;
+        min-height:235px!important;
+        padding:14px 16px!important;
+        border-radius:18px!important;
+      }
+      .tile h3{
+        font-size:24px!important;
+        margin:0 0 10px!important;
+      }
+      .tile b{
+        font-size:16px!important;
+      }
+      .mini{
+        font-size:13px!important;
+        line-height:1.55!important;
+        white-space:nowrap!important;
+      }
+      .noiseBox{
+        margin-top:10px!important;
+        padding-top:10px!important;
+        font-size:13px!important;
+      }
+      .noiseBox b{
+        font-size:13px!important;
+      }
+      .noiseBox div{
+        grid-template-columns:58px 1fr 1fr!important;
+        gap:6px!important;
+      }
+      .noiseBox span{
+        padding:7px 6px!important;
+        border-radius:10px!important;
+      }
+    }
+  `;
+  document.head.appendChild(st);
+}
+
+injectLayoutFix();
 today.textContent=new Date().toLocaleDateString('he-IL');
 function preset(n){
   if([2,3,4,10].includes(n))return{regMain:'88',heavyMain:'88',regEarly:'91',heavyEarly:'93'};
